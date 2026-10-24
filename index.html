@@ -63,6 +63,7 @@ if(ALLOWED_UIDS.some(uid => uid.startsWith("PASTE_") || uid.includes("yzYKhjG5wX
   await auth.signOut();
   showAuth();
   return status("설정이 아직 완성되지 않았어. UID 두 개를 확인해 줘.",true);
+}
  if(!ALLOWED_UIDS.includes(user.uid)){await auth.signOut();showAuth();return status("이 계정은 우리랑 공유 멤버로 등록되어 있지 않아.",true)}
  showApp(user);
  if(unsubscribe)unsubscribe();
